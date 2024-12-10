@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body class="h-screen w-full flex flex-col items-center justify-center bg-slate-900">
+    <!-- calculator container -->
+     <div class="flex items-center justify-center">
+        <p class="mr-2 mb-8 text-slate-500">Powered by</p>
+        <h1 class="mb-10 text-white text-2xl">RhedTech</h1>
+     </div>
+    <div class="cont p-5 rounded-xl">
+      <div>
+        <h1 class="text-white text-center mb-4">CALCULATOR</h1>
+        <div>
+          <input
+            class="w-full bg-slate-800 border-none rounded-lg mb-6 h-14 text-white text-right direction-rtl px-1 text-xl"
+            readonly
+            id="display"
+            type="text"
+          />
+        </div>
+        <div class="buttons">
+          <div class="flex">
+            <button class="btn text-white bg-slate-400 rounded-3xl" onclick="delAll()">
+              AC
+            </button>
+            <button class="btn text-white text-sm bg-slate-400" onclick="del()">DEL</button>
+            <button class="btn text-black bg-green-500" onclick="square()">sqr</button>
+            <button id="numbers" class="btn text-black bg-green-500">/</button>
+          </div>
+          <div class="flex">
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">7</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">8</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">9</button>
+            <button id="numbers" class="btn text-black bg-green-500">*</button>
+          </div>
+          <div class="flex">
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">4</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">5</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">6</button>
+            <button id="numbers" class="btn text-black bg-green-500">-</button>
+          </div>
+          <div class="flex">
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">1</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">2</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">3</button>
+            <button id="numbers" class="btn text-black bg-green-500">+</button>
+          </div>
+          <div class="flex">
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">0</button>
+            <button id="numbers" class="btn bg-slate-700 text-slate-200">.</button>
+            <button
+              class="btn bg-slate-700 text-white px-14 text-xl rounded-3xl"
+            onclick="evaluateExpression()" >
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
